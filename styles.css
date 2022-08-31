@@ -1,0 +1,120 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(30, 38%, 92%);
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Montserrat';
+  margin: 0%;
+  padding: 0%;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+.product-image {
+    background: url("./images/image-product-desktop.jpg");
+    background-size: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.description
+{
+    color: hsl(228, 12%, 48%);
+}
+
+.heading {
+    font-family: 'Montserrat';
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 6px;
+}
+
+.title
+{
+    font-family: 'Fraunces';
+    color: hsl(212, 21%, 14%);
+    font-size: 2.8em;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+.pricing { 
+    display: flex;
+    font-family: 'Fraunces';
+    color: hsl(158, 36%, 37%);
+    font-size: 2.5em;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px 30px 0px;
+}
+
+.old-price {
+ font-family: 'Montserrat';
+ text-decoration-line: line-through;
+ font-size: 0.4em;
+ color: hsl(228, 12%, 48%);
+ font-weight: normal;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    font-weight: bold;
+}
+
+.add-to-cart:hover {
+    transform: translateY(-5px);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.cart-icon {
+    padding: 0px 10px 0px 0px;
+}
+
+
+@media only screen and (max-width: 1150px) {
+    .product-container {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 660px) {
+    .product-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 1fr;
+        width: 90%;
+    }
+
+    .product-image {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .title, .pricing {
+        font-size: 2em;
+    }
+
+
+}
